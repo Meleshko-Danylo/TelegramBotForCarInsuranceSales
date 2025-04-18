@@ -1,6 +1,15 @@
 ﻿# TelegramBotForCarInsuranceSales
 
-This telegram bot uses mindee for extracting data from documents and Azure OpenAI for assisting
+This telegram bot uses mindee for extracting data from documents and Azure OpenAI for assisting.
+
+Workflow:
+- When user start conversetion, bot sends messege where he intraduses himself and asks for passport photo and waits for the photo
+- If user asks soming while bot is weiting for a photo, it should just answer a question
+- After user sent the photo of passport, mindee processes the photo and the bot sends the result of it to ask for confirmation
+- If user confirmes the data it asks for vehicle identification document and waits, otherwise it ask to send a photo of passport again and waits for the photo
+- After user sent the photo of vehicle, mindee processes the photo and the bot sends the result of it to ask for confirmation
+- If user confirmes the data it asks for fixed price confirmation (100 usd)
+- If user confirmes the price api generates policy document and sends to the user, otherwise it says that there is no other price and asks for confirmation again
 
 To run this project you need to have instoled next dependences:
 - .NET 8.0
